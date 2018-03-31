@@ -1,0 +1,15 @@
+C:\Users\Sea of trees\source\repos\SpigotBuilder\SpigotBuilder\bin\Debug\SpigotBuilder.exe.config
+C:\Users\Sea of trees\source\repos\SpigotBuilder\SpigotBuilder\bin\Debug\SpigotBuilder.exe
+C:\Users\Sea of trees\source\repos\SpigotBuilder\SpigotBuilder\bin\Debug\SpigotBuilder.pdb
+C:\Users\Sea of trees\source\repos\SpigotBuilder\SpigotBuilder\obj\Debug\SpigotBuilder.csprojResolveAssemblyReference.cache
+C:\Users\Sea of trees\source\repos\SpigotBuilder\SpigotBuilder\obj\Debug\SpigotBuilder.Form1.resources
+C:\Users\Sea of trees\source\repos\SpigotBuilder\SpigotBuilder\obj\Debug\SpigotBuilder.Properties.Resources.resources
+C:\Users\Sea of trees\source\repos\SpigotBuilder\SpigotBuilder\obj\Debug\SpigotBuilder.csproj.GenerateResource.Cache
+C:\Users\Sea of trees\source\repos\SpigotBuilder\SpigotBuilder\obj\Debug\SpigotBuilder.csproj.CoreCompileInputs.cache
+C:\Users\Sea of trees\source\repos\SpigotBuilder\SpigotBuilder\obj\Debug\SpigotBuilder.exe
+C:\Users\Sea of trees\source\repos\SpigotBuilder\SpigotBuilder\obj\Debug\SpigotBuilder.pdb
+C:\Users\Sea of trees\source\repos\SpigotBuilder\SpigotBuilder\bin\Debug\SpigotBuilder.exe.manifest
+C:\Users\Sea of trees\source\repos\SpigotBuilder\SpigotBuilder\bin\Debug\SpigotBuilder.application
+C:\Users\Sea of trees\source\repos\SpigotBuilder\SpigotBuilder\obj\Debug\SpigotBuilder.TrustInfo.xml
+C:\Users\Sea of trees\source\repos\SpigotBuilder\SpigotBuilder\obj\Debug\SpigotBuilder.exe.manifest
+C:\Users\Sea of trees\source\repos\SpigotBuilder\SpigotBuilder\obj\Debug\SpigotBuilder.application
