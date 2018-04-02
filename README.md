@@ -1,5 +1,7 @@
 # SpigotBuilder
 Instead of BuildToolsGUI
+# Operating environment
+.NET Framework 4.6.1
 # License
 [MITLicense](https://opensource.org/licenses/MIT)
 # Download
