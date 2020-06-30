@@ -43,24 +43,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SpigotBuilder.exe" size="52296">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SpigotBuilder.exe" size="54272">
       <assemblyIdentity name="SpigotBuilder" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>tQ4q+fWiluCHdCfH+6QQroCu9BOBg8NUPh4lRXhuon0=</dsig:DigestValue>
+        <dsig:DigestValue>uWqm3HCUNOMuE2wS5tEeSCIzqDHU5zX7Qj0tj/S11Vc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="SpigotBuilder.exe.config" size="189">
+  <file name="SpigotBuilder.exe.config" size="186">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>rl5/qDc7Jz+tB+BIbOv9iMGPlRe6YJwrjmU09dnlPcs=</dsig:DigestValue>
+      <dsig:DigestValue>eSEJjkfolEEv39DK/g+IzGhJd0CZjqwXxowAEpBp2AM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="spigotico.ico" size="16958">

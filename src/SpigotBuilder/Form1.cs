@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Numerics;
 using System.Reflection;
 using System.Text;
 using System.Threading;
@@ -196,14 +197,29 @@ namespace SpigotBuilder
 
             textBox1.AppendText("getting new version spigot list...\r\n");
             string vl;
+            var lst = new List<McVersion>();
 
             try
             {
                 //get spigot json list
-                HttpClient hc = new HttpClient();
-                Task<string> task = hc.GetStringAsync("https://hub.spigotmc.org/versions/");
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls;
+                WebClient wc = new WebClient();
+                wc.Headers.Add("method", "GET");
+                wc.Headers.Add("authority", "hub.spigotmc.org");
+                wc.Headers.Add("scheme", "https");
+                wc.Headers.Add("path", "/versions/");
+                wc.Headers.Add("pragma", "no-cache");
+                wc.Headers.Add("cache-control", "no-cache");
+                wc.Headers.Add("upgrade-insecure-requests", "1");
+                wc.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36");
+                wc.Headers.Add("accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
+                wc.Headers.Add("sec-fetch-site", "none");
+                wc.Headers.Add("sec-fetch-mode", "navigate");
+                wc.Headers.Add("sec-fetch-user", "?1");
+                wc.Headers.Add("sec-fetch-dest", "document");
+                wc.Headers.Add("accept-language", "en,ja;q=0.9,ko;q=0.8,zh-TW;q=0.7,zh;q=0.6");
 
-                vl = await task;
+                vl = await wc.DownloadStringTaskAsync("https://hub.spigotmc.org/versions/");
 
                 //extraction version list
                 System.Text.RegularExpressions.Regex r =
@@ -222,22 +238,67 @@ namespace SpigotBuilder
                         v = v.Remove(l);
                     }
 
-                    if(!comboBox1.Items.Contains(v))
-                        comboBox1.Items.Add(v);
+                    var mv = new McVersion(v);
+                    if(!lst.Contains(mv))
+                        lst.Add(mv);
 
                     m = m.NextMatch();
+                }
+
+                //sort
+                lst.Sort((a, b) => (int)(b.EvalValue() - a.EvalValue()));
+
+
+                foreach (McVersion v in lst)
+                {
+                    if(!comboBox1.Items.Contains(v.ToVerison()))
+                        comboBox1.Items.Add(v.ToVerison());
                 }
 
                 textBox1.AppendText("Update Success!\r\n");
 
             }
-            catch
+            catch(Exception e)
             {
-                textBox1.AppendText("ERROR! spigotmc.org is invalid.");
-                textBox1.AppendText("URL: https://hub.spigotmc.org/versions/");
+                textBox1.AppendText("Update ERROR!");
+                textBox1.AppendText(e.ToString());
             }
 
             button2.Enabled = true;
         }
     }
+
+    class McVersion
+    {
+        private int First { get; set; }
+        private int Middle { get; set; }
+        private int Last { get; set; }
+
+        public McVersion(string version)
+        {
+            string[] lst = version.Split('.');
+            First = int.Parse(lst[0]);
+            Middle = int.Parse(lst[1]);
+            if (lst.Length > 2)
+            {
+                Last = int.Parse(lst[2]);
+            }
+            else
+            {
+                Last = 0;
+            }
+                
+        }
+
+        public string ToVerison()
+        {
+            return First + "." + Middle + "." + Last;
+        }
+
+        public long EvalValue()
+        {
+            return First * 1000000 + Middle * 1000 + First;
+        }
+    }
+
 }

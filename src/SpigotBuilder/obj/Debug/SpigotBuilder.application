@@ -4,7 +4,7 @@
   <description asmv2:publisher="SpigotBuilder" asmv2:product="SpigotBuilder" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" />
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
     <dependentAssembly dependencyType="install" codebase="SpigotBuilder.exe.manifest" size="5240">
@@ -14,7 +14,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KZTQP0Y1wFKElBbaFUaK05blvOHmGcCB3XlyYsHX0FM=</dsig:DigestValue>
+        <dsig:DigestValue>6Oxv/tiM0crHY6+sG94qoZCKPeRt67RDzkReNW7ClUc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
