@@ -80,14 +80,30 @@ namespace SpigotBuilder
             try
             {
                 WebClient dc = new WebClient();
+
                 dc.DownloadFileCompleted += DownloadCompleted;
+                dc.Headers.Add("method", "GET");
+                dc.Headers.Add("authority", "hub.spigotmc.org");
+                dc.Headers.Add("scheme", "https");
+                dc.Headers.Add("pragma", "no-cache");
+                dc.Headers.Add("cache-control", "no-cache");
+                dc.Headers.Add("upgrade-insecure-requests", "1");
+                dc.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36");
+                dc.Headers.Add("accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
+                dc.Headers.Add("sec-fetch-site", "none");
+                dc.Headers.Add("sec-fetch-mode", "navigate");
+                dc.Headers.Add("sec-fetch-user", "?1");
+                dc.Headers.Add("sec-fetch-dest", "document");
+                dc.Headers.Add("accept-language", "en,ja;q=0.9,ko;q=0.8,zh-TW;q=0.7,zh;q=0.6");
                 Uri uri = new Uri("https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar");
                 dc.DownloadFileAsync(uri, directoryName + "\\BuildTools.jar");
             }
-            catch
+            catch(Exception ex)
             {
-                textBox1.AppendText("ERROR! spigotmc.org is invalid.");
-                textBox1.AppendText("URL: https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar");
+                textBox1.AppendText("ERROR! Download Failded.");
+                textBox1.AppendText(ex.Message);
+                button2.Enabled = true;
+                button1.Enabled = true;
             }
 
         }
@@ -176,8 +192,7 @@ namespace SpigotBuilder
         }
 
         //OutputDataReceivedEventHandler
-        void Cout(object sender
-            , System.Diagnostics.DataReceivedEventArgs e)
+        void Cout(object sender, System.Diagnostics.DataReceivedEventArgs e)
         {
 
             Task.Run(() =>

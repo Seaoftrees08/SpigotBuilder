@@ -1,0 +1,14 @@
+C:\Users\Phant\source\repos\SpigotBuilder\src\SpigotBuilder\bin\Release\SpigotBuilder.exe.config
+C:\Users\Phant\source\repos\SpigotBuilder\src\SpigotBuilder\bin\Release\SpigotBuilder.exe.manifest
+C:\Users\Phant\source\repos\SpigotBuilder\src\SpigotBuilder\bin\Release\SpigotBuilder.application
+C:\Users\Phant\source\repos\SpigotBuilder\src\SpigotBuilder\bin\Release\SpigotBuilder.exe
+C:\Users\Phant\source\repos\SpigotBuilder\src\SpigotBuilder\bin\Release\SpigotBuilder.pdb
+C:\Users\Phant\source\repos\SpigotBuilder\src\SpigotBuilder\obj\Release\SpigotBuilder.Form1.resources
+C:\Users\Phant\source\repos\SpigotBuilder\src\SpigotBuilder\obj\Release\SpigotBuilder.Properties.Resources.resources
+C:\Users\Phant\source\repos\SpigotBuilder\src\SpigotBuilder\obj\Release\SpigotBuilder.csproj.GenerateResource.cache
+C:\Users\Phant\source\repos\SpigotBuilder\src\SpigotBuilder\obj\Release\SpigotBuilder.csproj.CoreCompileInputs.cache
+C:\Users\Phant\source\repos\SpigotBuilder\src\SpigotBuilder\obj\Release\SpigotBuilder.TrustInfo.xml
+C:\Users\Phant\source\repos\SpigotBuilder\src\SpigotBuilder\obj\Release\SpigotBuilder.exe.manifest
+C:\Users\Phant\source\repos\SpigotBuilder\src\SpigotBuilder\obj\Release\SpigotBuilder.application
+C:\Users\Phant\source\repos\SpigotBuilder\src\SpigotBuilder\obj\Release\SpigotBuilder.exe
+C:\Users\Phant\source\repos\SpigotBuilder\src\SpigotBuilder\obj\Release\SpigotBuilder.pdb
