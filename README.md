@@ -1,5 +1,8 @@
 # SpigotBuilder
 Instead of BuildToolsGUI
+> NOTICE  
+> I am developing this software privately.  
+> You may get a warning because I have not done the digital signature properly.
 
 # Operating environment
 .NET Framework 4.7.2
@@ -8,12 +11,17 @@ Instead of BuildToolsGUI
 [MITLicense](https://opensource.org/licenses/MIT)
 
 # Download
-You can get this software from [here](https://github.com/Seaoftrees/SpigotBuilder/blob/master/src/SpigotBuilder/bin/Release/app.publish/SpigotBuilder.exe?raw=true).
+You can get this software from [releases](https://github.com/Seaoftrees08/SpigotBuilder/releases).
+> NOTICE  
+> The download link has been changed.
 
 # Updates
+- 2023/03/31
+  - UPDATE: HTTP headers
+  - FIX: Version list sort bug.
 - 2020/07/2
-  - FIX Wget Connection is not possible
-  - FIX Button remains disabled on error
+  - FIX: Wget Connection is not possible
+  - FIX: Button remains disabled on error
 - 2020/07/1
   - FIX: HTTP Connection is not possible
   - ADD: Version sort function

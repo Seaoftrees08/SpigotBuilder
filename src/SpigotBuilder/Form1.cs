@@ -1,16 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
-using System.Numerics;
-using System.Reflection;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -88,7 +81,7 @@ namespace SpigotBuilder
                 dc.Headers.Add("pragma", "no-cache");
                 dc.Headers.Add("cache-control", "no-cache");
                 dc.Headers.Add("upgrade-insecure-requests", "1");
-                dc.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36");
+                dc.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36");
                 dc.Headers.Add("accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
                 dc.Headers.Add("sec-fetch-site", "none");
                 dc.Headers.Add("sec-fetch-mode", "navigate");
@@ -226,7 +219,7 @@ namespace SpigotBuilder
                 wc.Headers.Add("pragma", "no-cache");
                 wc.Headers.Add("cache-control", "no-cache");
                 wc.Headers.Add("upgrade-insecure-requests", "1");
-                wc.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36");
+                wc.Headers.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36");
                 wc.Headers.Add("accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9");
                 wc.Headers.Add("sec-fetch-site", "none");
                 wc.Headers.Add("sec-fetch-mode", "navigate");
@@ -261,10 +254,10 @@ namespace SpigotBuilder
                 }
 
                 //sort
-                lst.Sort((a, b) => (int)(b.EvalValue() - a.EvalValue()));
+                var orderd = lst.OrderBy(a => a.EvalValue()).Reverse();
 
 
-                foreach (McVersion v in lst)
+                foreach (McVersion v in orderd)
                 {
                     if(!comboBox1.Items.Contains(v.ToVerison()))
                         comboBox1.Items.Add(v.ToVerison());
@@ -310,9 +303,9 @@ namespace SpigotBuilder
             return First + "." + Middle + "." + Last;
         }
 
-        public long EvalValue()
+        public int EvalValue()
         {
-            return First * 1000000 + Middle * 1000 + First;
+            return First * 10000 + Middle * 100 + Last;
         }
     }
 
