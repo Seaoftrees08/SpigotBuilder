@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -253,10 +254,10 @@ namespace SpigotBuilder
                 }
 
                 //sort
-                lst.Sort((a, b) => (int)(b.EvalValue() - a.EvalValue()));
+                var orderd = lst.OrderBy(a => a.EvalValue()).Reverse();
 
 
-                foreach (McVersion v in lst)
+                foreach (McVersion v in orderd)
                 {
                     if(!comboBox1.Items.Contains(v.ToVerison()))
                         comboBox1.Items.Add(v.ToVerison());
@@ -302,9 +303,9 @@ namespace SpigotBuilder
             return First + "." + Middle + "." + Last;
         }
 
-        public long EvalValue()
+        public int EvalValue()
         {
-            return First * 1000000 + Middle * 1000 + First;
+            return First * 10000 + Middle * 100 + Last;
         }
     }
 
