@@ -17,7 +17,7 @@ You can get this software from [releases](https://github.com/Seaoftrees08/Spigot
 
 # Updates
 - 2023/03/31 (v1.2)
- - FIX: Fixed a spelling error in "latest"
+  - FIX: Fixed a spelling error in "latest"
 - 2023/03/31 (v1.1)
   - UPDATE: HTTP headers
   - FIX: Version list sort bug.
