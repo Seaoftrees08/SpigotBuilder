@@ -256,7 +256,8 @@ namespace SpigotBuilder
                 //sort
                 var orderd = lst.OrderBy(a => a.EvalValue()).Reverse();
 
-
+                comboBox1.Items.Clear();
+                comboBox1.Items.Add("latest");
                 foreach (McVersion v in orderd)
                 {
                     if(!comboBox1.Items.Contains(v.ToVerison()))

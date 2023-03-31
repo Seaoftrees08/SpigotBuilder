@@ -129,7 +129,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Spigot Builder v1.1";
+            this.Text = "Spigot Builder v1.2";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Shown += new System.EventHandler(this.Form1_ShownAsync);
             this.ResumeLayout(false);
