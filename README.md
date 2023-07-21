@@ -16,6 +16,8 @@ You can get this software from [releases](https://github.com/Seaoftrees08/Spigot
 > The download link has been changed.
 
 # Updates
+- 2023/07/21 (v1.3)
+  - FIX: Support TLS1.2, 1.3. 
 - 2023/03/31 (v1.2)
  - FIX: Fixed a spelling error in "latest"
 - 2023/03/31 (v1.1)
